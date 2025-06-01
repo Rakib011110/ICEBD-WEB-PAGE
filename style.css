@@ -10,7 +10,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -493,19 +493,16 @@ header nav ul li a:hover {
     background-color: #005f9e; /* ICE Primary Blue */
     color: #ffffff;
     padding: 15px 0;
-    text-align: center; 
-  
-
+    text-align: center;
 }
 .social-media-bar .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 .social-media-bar span {
     font-size: 1.1em;
     font-weight: 500;
-
 }
 .social-icons-footer img {
     height: 28px; /* Slightly smaller icons */
@@ -516,6 +513,68 @@ header nav ul li a:hover {
     opacity: 0.8;
 }
 
+/* Explore More Section (New - from image_288e99.jpg) */
+.explore-more-section {
+    background-color: #ffffff; /* White background, or a very light grey if preferred */
+}
+/* Optional: Title for the explore-more section */
+/*
+.explore-more-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 35px;
+}
+*/
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 10px; /* No gap as per image, cards are flush */
+}
+.explore-card {
+    background-color: #00798C; /* Teal color from the image for the content part */
+    color: #ffffff; /* White text on teal */
+    /* No border-radius on the card itself if images are flush on top */
+    display: flex;
+    flex-direction: column;
+}
+.explore-card img {
+    width: 100%;
+    height: 220px; /* Adjust as needed */
+    object-fit: cover;
+    display: block; /* Remove any extra space below image */
+}
+.explore-card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.explore-card-content h3 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.explore-card-content p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+.read-more-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-top: auto; /* Pushes link to the bottom */
+    align-self: flex-start; /* Aligns to the left */
+    transition: opacity 0.2s ease;
+}
+.read-more-link:hover {
+    opacity: 0.8;
+}
+
 
 /* Footer Section */
 footer {
@@ -523,7 +582,6 @@ footer {
     color: #c0c0c0; /* Lighter grey for footer text */
     text-align: center;
     padding: 25px 0;
-    margin-top: 20px; /* Space between footer and content above */
     /* margin-top: 40px; No margin needed if social bar is directly above */
 }
 footer p {
@@ -581,10 +639,13 @@ footer a:hover {
     .hero-text-box h1 {
         font-size: 2.4em;
     }
-    .event-grid, .news-grid, .qualification-grid {
+    .event-grid, .news-grid, .qualification-grid, .explore-grid {
         grid-template-columns: 1fr; /* Single column for cards on mobile */
     }
     .featured-event-section h2, .events-section h2, .news-section h2, .qualification-section h2 {
         font-size: 1.7em; /* Adjusted heading sizes for mobile */
+    }
+    .explore-card {
+        margin-bottom: 1px; /* Slight separation for stacked cards on mobile if desired */
     }
 }
