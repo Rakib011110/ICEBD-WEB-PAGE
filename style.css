@@ -1,0 +1,586 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light greyish background */
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    padding: 10px 0; /* Reduced padding */
+    border-bottom: 3px solid #005f9e; /* ICE primary blue */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 50px; /* Adjusted logo height */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Adjusted spacing */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500; /* Slightly bolder */
+    font-size: 0.95em; /* Adjusted font size */
+    padding: 10px 5px; /* Added padding for click area */
+    border-bottom: 2px solid transparent; /* For hover effect */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: #005f9e;
+    border-bottom-color: #005f9e;
+}
+
+/* Hero Banner Section */
+.hero-section {
+    height: 500px; /* As per image_36f90c.jpg */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Vertically center the text box container */
+    color: #ffffff;
+    position: relative;
+}
+.hero-section::before { /* Overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35); /* Dark overlay */
+}
+
+.hero-text-container { /* To align the text box using flex properties of hero-section */
+    position: relative; /* To ensure it's above the overlay */
+    z-index: 1;
+    width: 100%; /* Take full width of container */
+}
+
+.hero-text-box {
+    background-color: rgba(0, 51, 102, 0.85); /* Dark blue, semi-transparent, matching image_36f90c.jpg */
+    padding: 25px 40px;
+    display: inline-block; /* Fit content */
+    border-left: 6px solid #00bfff; /* Bright blue accent, similar to image */
+}
+
+.hero-text-box h1 {
+    margin: 0;
+    font-size: 3.2em; /* Large text */
+    font-weight: 600; /* Bold */
+    color: #ffffff;
+}
+
+/* General Section Padding */
+.section-padding {
+    padding: 50px 0;
+}
+
+/* Overview Section (from image_36f8ce.png) */
+.overview-section {
+    background-color: #ffffff;
+}
+.overview-content p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+    color: #4f4f4f;
+}
+.overview-content strong {
+    color: #003366; /* Darker blue for emphasis */
+}
+.social-links {
+    list-style: none;
+    padding-left: 0;
+}
+.social-links li {
+    margin-bottom: 0.5em;
+}
+.social-links a {
+    color: #005f9e;
+    text-decoration: none;
+    font-weight: 500;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Featured Event Section (from image_36f859.jpg) */
+.featured-event-section {
+    background-color: #002347; /* Very dark blue, matching the image background */
+    color: #e0e0e0; /* Light text color for contrast */
+}
+.featured-event-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.featured-event-text {
+    flex: 1.2; /* Give more space to text */
+}
+.featured-event-image {
+    flex: 0.8; /* Less space for image */
+    text-align: right;
+}
+.featured-event-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.event-tag-featured {
+    background-color: #00bfff; /* Bright blue tag, similar to image */
+    color: #002347; /* Dark text on light tag */
+    padding: 6px 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.featured-event-section h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.featured-event-section p {
+    font-size: 1em;
+    margin-bottom: 0.8em;
+    line-height: 1.7;
+}
+.event-details-featured p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95em;
+    margin-bottom: 0.6em;
+}
+.event-details-featured .icon { /* Placeholder icon styling */
+    width: 18px;
+    height: 18px;
+    border-radius: 3px; /* Slight rounding for placeholder */
+}
+.event-price-featured {
+    font-weight: bold;
+    font-size: 1.1em !important;
+    color: #ffc107; /* Yellow/gold for price */
+    margin-top: 15px !important;
+}
+
+/* Other Events Section (from image_36a6b9.png) */
+.events-section {
+    background-color: #f0f2f5; /* Slightly different light grey */
+}
+.events-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 35px;
+}
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+.event-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.event-card-content {
+    padding: 18px;
+    flex-grow: 1; /* Allows content to fill space if cards have different heights */
+    display: flex;
+    flex-direction: column;
+}
+.event-category {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: 600; /* Bolder category tag */
+    border-radius: 4px; /* Less rounded tags */
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.event-category.networking {
+    background-color: #007bff; /* Blue for networking */
+}
+.event-category.support {
+    background-color: #28a745; /* Green for support */
+}
+/* Add more categories as needed */
+.event-card h3 {
+    font-size: 1.3em;
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.event-card p {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 12px;
+    flex-grow: 1; /* Pushes meta to bottom */
+}
+.event-meta {
+    font-size: 0.85em;
+    color: #666666;
+    margin-top: auto; /* Pushes meta to bottom if content above varies */
+}
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.event-meta .icon-small { /* Placeholder icon styling */
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+.event-price-card {
+    font-weight: bold;
+    color: #003366;
+    font-size: 1em !important; /* Ensure it stands out */
+    margin-top: 8px;
+}
+
+.view-all-events-button {
+    text-align: center;
+    margin-top: 35px;
+}
+.btn-view-all {
+    background-color: #ffc107; /* Yellow/gold button, matching image */
+    color: #003366; /* Dark blue text */
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid #ffc107; /* Border of same color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-view-all:hover {
+    background-color: #e0a800; /* Darker yellow/gold on hover */
+    color: #002347;
+    border-color: #e0a800;
+}
+
+/* Latest News Section (from image_3622d7.jpg) */
+.news-section {
+    background-color: #ffffff; /* White background for news */
+}
+.news-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 35px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+}
+.news-card {
+    background-color: #ffffff; /* Card background */
+    border-radius: 6px;
+    /* No strong shadow, subtle border if needed, or rely on section background difference */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+}
+.news-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.news-card img {
+    width: 100%;
+    height: 200px; /* Slightly shorter than event images */
+    object-fit: cover;
+}
+.news-card-content {
+    padding: 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.news-category-tag {
+    display: inline-block;
+    color: #005f9e; /* Blue text for category */
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* Adding an icon like the image */
+    padding-left: 22px; /* Space for icon */
+    background-image: url("[https://placehold.co/16x16/005f9e/FFFFFF?text=N&font=lato](https://placehold.co/16x16/005f9e/FFFFFF?text=N&font=lato)"); /* Placeholder news icon */
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.news-card h3 {
+    font-size: 1.25em; /* Slightly smaller than event titles */
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.news-card p {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+.news-meta {
+    font-size: 0.85em;
+    color: #6c757d; /* Grey for date */
+    margin-top: auto;
+    border-top: 1px solid #eeeeee; /* Separator line */
+    padding-top: 10px;
+}
+.news-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.view-all-news-button { /* Reusing .view-all-events-button style */
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+/* Qualification Support Section (from image_361efc.png) */
+.qualification-section {
+    background-color: #f0f2f5; /* Light grey background */
+}
+.qualification-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 35px;
+}
+.qualification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+}
+.qualification-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: flex; /* To align content if needed */
+    flex-direction: column;
+    padding: 20px; /* Padding directly on card */
+}
+
+.qualification-card-content { /* Wrapper no longer needed if padding on card */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.qualification-category { /* Similar to event category but specific for qualification */
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    /* Adding icon like the image */
+    padding-left: 25px; /* Space for icon */
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.qualification-category.support {
+    background-color: #28a745; /* Green */
+    background-image: url("[https://placehold.co/18x18/FFFFFF/28a745?text=S&font=lato](https://placehold.co/18x18/FFFFFF/28a745?text=S&font=lato)"); /* Placeholder support icon */
+}
+.qualification-category.review-prep {
+    background-color: #17a2b8; /* Teal/Info blue */
+    background-image: url("[https://placehold.co/18x18/FFFFFF/17a2b8?text=R&font=lato](https://placehold.co/18x18/FFFFFF/17a2b8?text=R&font=lato)");
+}
+.qualification-category.tech-support {
+    background-color: #fd7e14; /* Orange */
+    background-image: url("[https://placehold.co/18x18/FFFFFF/fd7e14?text=T&font=lato](https://placehold.co/18x18/FFFFFF/fd7e14?text=T&font=lato)");
+}
+
+.qualification-card h3 {
+    font-size: 1.25em;
+    color: #003366;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.qualification-card p {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+.qualification-meta { /* Similar to event-meta */
+    font-size: 0.85em;
+    color: #666666;
+    margin-top: auto;
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+}
+.qualification-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.qualification-price-card { /* Reusing class from event card */
+    font-weight: bold;
+    color: #003366;
+    font-size: 1em !important;
+    margin-top: 8px;
+}
+.view-all-qualification-button { /* Reusing .view-all-events-button style */
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Social Media Bar (from image_361efc.png bottom) */
+.social-media-bar {
+    background-color: #005f9e; /* ICE Primary Blue */
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+.social-media-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-media-bar span {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.social-icons-footer img {
+    height: 28px; /* Slightly smaller icons */
+    margin-left: 12px;
+    transition: opacity 0.2s ease;
+}
+.social-icons-footer img:hover {
+    opacity: 0.8;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #002347; /* Very dark blue, consistent with featured event */
+    color: #c0c0c0; /* Lighter grey for footer text */
+    text-align: center;
+    padding: 25px 0;
+    /* margin-top: 40px; No margin needed if social bar is directly above */
+}
+footer p {
+    margin: 6px 0;
+    font-size: 0.9em;
+}
+footer a {
+    color: #00bfff; /* Bright blue for links in footer */
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+    .featured-event-content-wrapper {
+        flex-direction: column;
+        text-align: center; /* Center text for smaller screens */
+    }
+    .featured-event-image {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .hero-text-box h1 {
+        font-size: 2.8em;
+    }
+    .social-media-bar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    header nav ul li {
+        margin: 5px 10px;
+    }
+    .hero-section {
+        height: 400px; /* Shorter banner for mobile */
+    }
+    .hero-text-box {
+        padding: 20px 30px;
+    }
+    .hero-text-box h1 {
+        font-size: 2.4em;
+    }
+    .event-grid, .news-grid, .qualification-grid {
+        grid-template-columns: 1fr; /* Single column for cards on mobile */
+    }
+    .featured-event-section h2, .events-section h2, .news-section h2, .qualification-section h2 {
+        font-size: 1.7em; /* Adjusted heading sizes for mobile */
+    }
+}
