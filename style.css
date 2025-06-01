@@ -493,16 +493,19 @@ header nav ul li a:hover {
     background-color: #005f9e; /* ICE Primary Blue */
     color: #ffffff;
     padding: 15px 0;
-    text-align: center;
+    text-align: center; 
+  
+
 }
 .social-media-bar .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 .social-media-bar span {
     font-size: 1.1em;
     font-weight: 500;
+
 }
 .social-icons-footer img {
     height: 28px; /* Slightly smaller icons */
@@ -520,6 +523,7 @@ footer {
     color: #c0c0c0; /* Lighter grey for footer text */
     text-align: center;
     padding: 25px 0;
+    margin-top: 20px; /* Space between footer and content above */
     /* margin-top: 40px; No margin needed if social bar is directly above */
 }
 footer p {
