@@ -80,7 +80,7 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.35); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.123); /* Dark overlay */
 }
 
 .hero-text-container { /* To align the text box using flex properties of hero-section */
