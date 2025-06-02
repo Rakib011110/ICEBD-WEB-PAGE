@@ -727,7 +727,7 @@ footer a:hover {
 
 /* Contact Information Section */
 .contact-info-section {
-    background-color: #00447C; /* Dark teal/blue from image_ab7e51.png */
+    background-color: #2384aa; /* Dark teal/blue from image_ab7e51.png */
     color: #ffffff;
     /* .section-padding will provide top/bottom padding */
     /* .dark-theme class was on the HTML, ensure its styles apply or define here */
@@ -824,3 +824,215 @@ footer a:hover {
     color: #ffffff;
 }
 */
+
+
+
+/* Contact Regional Teams Section */
+.regional-teams-section {
+    background-color: #ffffff; /* White background for this section */
+    /* .section-padding class should provide top/bottom padding */
+}
+.regional-teams-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.tabs-container {
+    max-width: 900px; /* Constrain width for better readability */
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden; /* To contain floated elements or for border-radius */
+}
+
+.tab-buttons {
+    display: flex;
+    background-color: #f8f9fa; /* Light background for tab bar */
+}
+
+.tab-button {
+    flex: 1;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #f8f9fa; /* Default tab background */
+    color: #6c757d; /* Default tab text color */
+    font-size: 1.05em;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 3px solid transparent; /* For active state indicator */
+    position: relative; /* For the triangle indicator */
+}
+
+.tab-button:not(:last-child) {
+    border-right: 1px solid #e0e0e0; /* Separator between tabs */
+}
+
+.tab-button.active {
+    background-color: #4A3F7A; /* Dark purple from image for active tab */
+    color: #ffffff;
+    border-bottom-color: #4A3F7A; /* Make border same color to blend */
+}
+
+/* Triangle indicator for active tab */
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position below the tab */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #4A3F7A; /* Triangle color matches active tab */
+}
+
+/* Styling for the second tab button when not active, to match image */
+.tab-button:not(.active) {
+    background-color: #f0f2f5; /* Light grey for inactive tab */
+    color: #495057; /* Darker grey text for inactive tab */
+}
+.tab-button:not(.active):hover {
+    background-color: #e9ecef; /* Slightly darker on hover */
+}
+
+
+.tab-content {
+    padding: 25px;
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s; /* Simple fade-in animation */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.team-intro {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.team-member:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.member-photo {
+    width: 80px; /* Adjusted size */
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.25em;
+    color: #003366;
+}
+
+.member-info .member-title {
+    font-size: 0.95em;
+    color: #005f9e; /* Blue for title */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.member-info p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+.member-info p:last-child {
+    margin-bottom: 0;
+}
+
+.member-email {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em !important; /* Ensure consistency */
+}
+.member-email .icon-small { /* Reusing icon-small if defined, or define here */
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    /* background-color: #6c757d; Simple placeholder for icon background */
+    /* color: #fff; Text color for placeholder text if using */
+    /* display: inline-flex; align-items: center; justify-content: center; */
+    /* border-radius: 2px; */
+}
+.member-email a {
+    color: #005f9e;
+    text-decoration: none;
+}
+.member-email a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for tabs and team members */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column; /* Stack tabs vertically on small screens */
+    }
+    .tab-button {
+        border-right: none; /* Remove right border when stacked */
+        border-bottom: 1px solid #e0e0e0; /* Add bottom border as separator */
+    }
+    .tab-button.active::after { /* Reposition or hide triangle on small screens */
+        display: none; /* Simplest approach, or adjust positioning */
+    }
+    .tab-button.active {
+         border-bottom-color: #4A3F7A; /* Ensure active border is still visible */
+    }
+    .team-member {
+        flex-direction: column; /* Stack photo and info */
+        align-items: center; /* Center items when stacked */
+        text-align: center;
+    }
+    .member-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .member-info {
+        text-align: center;
+    }
+    .member-email {
+        justify-content: center; /* Center email link */
+    }
+}
+
+/* Common .section-padding class if not already globally defined */
+/*
+.section-padding {
+    padding: 50px 0;
+}
+*/
+
