@@ -648,4 +648,179 @@ footer a:hover {
     .explore-card {
         margin-bottom: 1px; /* Slight separation for stacked cards on mobile if desired */
     }
+} 
+
+
+/* Styles for Contact Page (contact.html) */
+
+/* Contact Page Specific Hero Banner */
+.contact-hero-section {
+    height: 400px; /* Slightly shorter than main hero if desired */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
 }
+.contact-hero-section::before { /* Overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35); /* Dark overlay */
+}
+
+/* Ensure .hero-text-container and .hero-text-box from main styles work here */
+/* If .hero-text-container is not defined globally, add:
+.hero-text-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+*/
+
+.contact-hero-text-box {
+    background-color: rgba(0, 51, 102, 0.88); /* Slightly more opaque if needed */
+    padding: 20px 35px;
+    display: inline-block;
+    border-left: 5px solid #00bfff; /* Consistent with main hero */
+    color: #ffffff; /* Ensure text is white */
+}
+
+.contact-hero-text-box .hero-breadcrumb {
+    display: block;
+    font-size: 0.9em;
+    color: #a0d2eb; /* Lighter blue for breadcrumb */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contact-hero-text-box h1 {
+    margin: 0;
+    font-size: 2.8em; /* Slightly smaller than main hero H1 if desired */
+    font-weight: 600;
+    color: #ffffff; /* Ensure h1 is white */
+}
+
+/* Contact Intro Section */
+.contact-intro-section {
+    background-color: #ffffff;
+    /* .section-padding will provide top/bottom padding */
+}
+.contact-intro-section .container p { /* Target p tags within the container of this section */
+    font-size: 1.1em;
+    color: #4f4f4f;
+    margin-bottom: 1.2em;
+    max-width: 800px; /* Optional: constrain width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center align the intro text */
+}
+.contact-intro-section .container p:first-child {
+    font-weight: 500;
+    color: #003366;
+    font-size: 1.2em;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+    background-color: #00447C; /* Dark teal/blue from image_ab7e51.png */
+    color: #ffffff;
+    /* .section-padding will provide top/bottom padding */
+    /* .dark-theme class was on the HTML, ensure its styles apply or define here */
+}
+.contact-info-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff; /* Ensure h2 is white on dark background */
+    margin-bottom: 40px;
+}
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start; /* Align items to the start of their grid cell */
+}
+.contact-details, .membership-team {
+    font-size: 1em;
+}
+.contact-details h3, .membership-team h3 {
+    font-size: 1.3em;
+    color: #ffc107; /* Yellow accent for headings */
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-details p, .membership-team p {
+    margin-bottom: 8px;
+    line-height: 1.7;
+    color: #e0e0e0; /* Lighter text for paragraphs on dark background */
+}
+.contact-details strong, .membership-team strong {
+    color: #ffffff; /* Brighter for labels like Email/Phone */
+}
+.contact-group {
+    margin-bottom: 25px;
+}
+.map-area {
+    grid-column: span 1; /* Default span */
+}
+.map-area iframe {
+    border-radius: 6px;
+    width: 100%; /* Make map responsive */
+    min-height: 300px; /* Ensure map has a decent height */
+    max-height: 350px;
+}
+.view-larger-map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.view-larger-map-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for contact info grid */
+@media (min-width: 992px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr 1fr 1.5fr; /* Address | Membership | Map */
+    }
+}
+@media (max-width: 768px) {
+    .contact-intro-section .container p {
+        text-align: left; /* Revert to left align on smaller screens if preferred */
+    }
+    .contact-info-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .map-area {
+        margin-top: 20px; /* Add some space above map when stacked */
+    }
+    .contact-hero-text-box h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* General .section-padding if not already defined or needs adjustment */
+/*
+.section-padding {
+    padding: 50px 0;
+}
+*/
+
+/* General .dark-theme styles if used and not fully defined elsewhere */
+/*
+.dark-theme {
+    background-color: #002347; // Example dark color
+    color: #e0e0e0;
+}
+.dark-theme h2 {
+    color: #ffffff;
+}
+*/
