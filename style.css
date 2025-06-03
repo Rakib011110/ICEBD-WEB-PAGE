@@ -1155,6 +1155,7 @@ footer a:hover {
 .social-media-bar-teal .social-icons-footer img { /* Reusing class, but icons are white on teal */
     height: 28px;
     margin-left: 12px;
+    background-color:white ;
     transition: opacity 0.2s ease;
     /* Assuming placeholder icons are white, otherwise, you'd need different icon images */
 }
