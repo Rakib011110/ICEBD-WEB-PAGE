@@ -1860,7 +1860,6 @@ footer a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.35); /* Dark overlay */
 }
 .areas-interest-hero-text-box {
     background-color: rgba(0, 121, 140, 0.9); /* Teal color from image_05a938.jpg text box */
@@ -1951,7 +1950,9 @@ footer a:hover {
 .connect-knowledge-hub-content {
     display: flex;
     align-items: center;
-    min-height: 380px; /* Adjust height as needed */
+    max-width: 1130px; /* As per image_0530e1.jpg */
+    margin:  auto; /* Added top/bottom margin for separation */
+    
     background-size: cover;
     background-position: center right; /* Image on the right */
     position: relative;
