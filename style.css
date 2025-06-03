@@ -1683,7 +1683,7 @@ footer a:hover {
 .social-media-bar-teal {
     background-color: #00A79D;
     color: #ffffff;
-    padding: 15px 0;
+    padding: 6px 0;
     text-align: center;
 }
 .social-media-bar-teal .container {
@@ -1696,8 +1696,9 @@ footer a:hover {
     font-weight: 500;
 }
 .social-media-bar-teal .social-icons-footer img {
-    height: 28px;
-    margin-left: 12px;
+    height: 50px;
+    background-color: #ffffff;
+   
     transition: opacity 0.2s ease;
 }
 .social-media-bar-teal .social-icons-footer img:hover {
