@@ -14,54 +14,64 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-
-/* Header and Navigation */
+/* Header and Navigation Styles */
 header {
-    background-color: #ffffff;
-    padding: 10px 0; /* Reduced padding */
-    border-bottom: 3px solid #005f9e; /* ICE primary blue */
-    position: sticky;
+    background-color: #ffffff; /* White background for the header */
+    padding: 10px 0; /* Padding above and below header content */
+    border-bottom: 3px solid #005f9e; /* ICE primary blue bottom border */
+    position: sticky; /* Makes the header stick to the top on scroll */
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1000; /* Ensures header stays above other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow below header */
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Arranges logo and nav side-by-side */
+    justify-content: space-between; /* Puts space between logo and nav */
+    align-items: center; /* Vertically aligns logo and nav items */
+}
+
+.logo-area {
+    /* Styles for the logo container if needed */
 }
 
 #logo {
-    height: 50px; /* Adjusted logo height */
+    height: 50px; /* Adjust as per your logo's aspect ratio and desired size */
+    /* Add other styles like margin if needed */
 }
 
 header nav ul {
-    list-style: none;
+    list-style: none; /* Removes default bullet points from list */
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Arranges nav items in a row */
 }
 
 header nav ul li {
-    margin-left: 20px; /* Adjusted spacing */
+    margin-left: 20px; /* Space to the left of each nav item (except the first) */
+}
+
+header nav ul li:first-child {
+    margin-left: 0; /* No left margin for the first nav item */
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: 500; /* Slightly bolder */
-    font-size: 0.95em; /* Adjusted font size */
-    padding: 10px 5px; /* Added padding for click area */
-    border-bottom: 2px solid transparent; /* For hover effect */
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    color: #333333; /* Default text color for nav links */
+    font-weight: 500; /* Slightly bolder text */
+    font-size: 0.95em; /* Adjust font size as needed */
+    padding: 10px 5px; /* Padding around the link text for a larger clickable area */
+    border-bottom: 2px solid transparent; /* Invisible border for hover/active state alignment */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition for hover/active states */
 }
 
+/* This is the key part for the active state! */
 header nav ul li a.active,
 header nav ul li a:hover {
-    color: #005f9e;
-    border-bottom-color: #005f9e;
+    color: #005f9e; /* ICE primary blue color for active or hovered link text */
+    border-bottom-color: #005f9e; /* ICE primary blue color for the underline effect */
 }
+
 
 /* Hero Banner Section */
 .hero-section {
@@ -1092,7 +1102,7 @@ footer a:hover {
 }
 .become-member-image img {
     width: 100%;
-    height: 100%; /* Make image fill the grid cell height */
+    height: 350px; /* Make image fill the grid cell height */
     object-fit: cover;
     display: block;
 }
@@ -1168,9 +1178,9 @@ footer a:hover {
 */
 .discover-grid {
     display: grid;
-    gap: 20px; 
+   
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 0; /* No gap as per image */
+    gap: 10px; /* No gap as per image */
 }
 .discover-card {
     background-color: #003366; /* Dark blue from image for content part */
